@@ -1,11 +1,6 @@
 import { todos } from "./schema";
 import { db } from "./database";
-import {
-  CreateTodoDto,
-  TodoDto,
-  TodoResponse,
-  UpdateTodoDto,
-} from "./todo.interface";
+import { CreateTodoDto, TodoResponse, UpdateTodoDto } from "./todo.interface";
 import { desc, eq } from "drizzle-orm";
 
 const TodoService = {
