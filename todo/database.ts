@@ -7,4 +7,4 @@ const DB = new SQLDatabase("todos", {
 
 const db = drizzle(DB.connectionString);
 
-export default db;
+export { db };
