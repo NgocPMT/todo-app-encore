@@ -24,7 +24,7 @@ export interface UpdateTodoDto {
   /** Content of the todo */
   text?: string;
   /** The due date of the todo */
-  dueAt: Date;
+  dueAt?: Date;
   /** Indicates if the todo is done or not*/
   isDone?: boolean;
   /** Indicates if the todo should be show or not*/
