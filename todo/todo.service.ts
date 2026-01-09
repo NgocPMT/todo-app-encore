@@ -1,7 +1,7 @@
 import { todos } from "./schema";
 import { db } from "./database";
 import { CreateTodoDto, TodoResponse, UpdateTodoDto } from "./todo.interface";
-import { desc, eq } from "drizzle-orm";
+import { asc, desc, eq } from "drizzle-orm";
 
 const TodoService = {
   create: async (data: CreateTodoDto): Promise<TodoResponse> => {
@@ -17,7 +17,7 @@ const TodoService = {
       .select()
       .from(todos)
       .where(eq(todos.isShow, true))
-      .orderBy(desc(todos.createdAt));
+      .orderBy(asc(todos.dueAt));
     return {
       success: true,
       result: todoLists,
