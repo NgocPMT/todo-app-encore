@@ -1,5 +1,5 @@
 {
-  "id": "68b45e1c-6cde-4d5f-afb2-f1a183ba8d55",
+  "id": "f90b3e38-03bf-43e9-9b88-0188771b2fbf",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -31,25 +31,31 @@
           "primaryKey": false,
           "notNull": true
         },
-        "isDone": {
-          "name": "isDone",
+        "is_done": {
+          "name": "is_done",
           "type": "boolean",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "default": false
         },
-        "isShow": {
-          "name": "isShow",
+        "is_show": {
+          "name": "is_show",
           "type": "boolean",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "default": true
         },
-        "createdAt": {
-          "name": "createdAt",
-          "type": "timestamp",
+        "due_at": {
+          "name": "due_at",
+          "type": "timestamp with time zone",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
           "default": "now()"
         }
       },
