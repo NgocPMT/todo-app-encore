@@ -7,6 +7,8 @@ export interface TodoDto {
   isDone: boolean;
   /** The status indicate the todo should be show or not*/
   isShow: boolean;
+  /** The due date of the todo */
+  dueAt: Date;
   /** The date and time when the todo is created */
   createdAt: Date;
 }
@@ -14,11 +16,15 @@ export interface TodoDto {
 export interface CreateTodoDto {
   /** Content of the todo */
   text: string;
+  /** The due date of the todo */
+  dueAt: Date;
 }
 
 export interface UpdateTodoDto {
   /** Content of the todo */
   text?: string;
+  /** The due date of the todo */
+  dueAt: Date;
   /** Indicates if the todo is done or not*/
   isDone?: boolean;
   /** Indicates if the todo should be show or not*/

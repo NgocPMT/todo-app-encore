@@ -1,7 +1,8 @@
 CREATE TABLE "todos" (
 	"id" integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (sequence name "todos_id_seq" INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START WITH 1 CACHE 1),
 	"text" varchar(255) NOT NULL,
-	"isDone" boolean DEFAULT false,
-	"isShow" boolean DEFAULT true,
-	"createdAt" timestamp DEFAULT now()
+	"is_done" boolean DEFAULT false NOT NULL,
+	"is_show" boolean DEFAULT true NOT NULL,
+	"due_at" timestamp with time zone NOT NULL,
+	"created_at" timestamp with time zone DEFAULT now() NOT NULL
 );
